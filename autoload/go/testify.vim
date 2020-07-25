@@ -100,7 +100,7 @@ function! go#testify#Func(bang, ...) abort
   "
   " for the full list
   " :help search
-  let test = search('func \(Test\|Example\)', "bcnW")
+  let test = search('func \(Test\|.\+Test\|Example\)', "bcnW")
 
   if test == 0
     echo "vim-go: [testify] no test found immediate to cursor"
